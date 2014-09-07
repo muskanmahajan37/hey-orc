@@ -13,6 +13,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'devise'
+# use older version of nokogiri due to issues on VMs
+gem 'nokogiri', '1.5.9'
 
 group :development do
   gem 'better_errors'

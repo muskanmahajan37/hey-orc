@@ -1,17 +1,10 @@
-<ul class="locations list-group">
-  <li class="list-group-item">
-    <h3 class="list-group-item-heading">
-      <%= @location.name %>
-    </h3>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <%= render partial: 'locations/location_info' %>
-      </li>
-      <% if @comments and @comments.length > 0 %>
-        <li class="list-group-item">
-          <%= render partial: 'locations/comments', locals: { comments: @comments } %>
-        </li>
-      <% end %>
-    </ul>
-  </li>
-</ul>
+<div class="row">
+<div class="page-header">
+  <h1><%= @location.name %> 
+    <small><%= @location.city %>, 
+    <%= @location.state %>
+    </small>
+  </h1>
+</div>
+  <%= render partial: 'locations/comments', locals: { comments: @comments } %>
+</div>

@@ -1,25 +1,11 @@
-<h3 class="list-group-item-heading">
-  <%= "Comments" %>
-</h3>
-<ul class="list-group">
-  <li class="list-group-item">
-    <div class="row list-group-item-heading">
-      <div class="col-md-3 col-md-offset-1">
-        <%= "USER" %>
-      </div>
-      <div class="col-md-7">
-        <%= "COMMENT" %>
-      </div>
-    </div>
-    <% comments.each do |comment| %>
-      <div class="row location-comment">
-        <div class="col-md-3 col-md-offset-1 location-heading">
-          <%= comment.user.humanize.titleize %>
-        </div>
-        <div class="col-md-7">
-          <%= comment.text %>
-        </div>
-      </div>
-    <% end %>
-  </li>
-</ul>
+<br>
+<br>
+<% comments.each do |comment| %>
+  <blockquote>
+    <p><%= comment.text %></p>
+    <footer>
+    <%= comment.user.humanize.titleize %>
+    </footer>
+  </blockquote>
+<% end %>
+ 
