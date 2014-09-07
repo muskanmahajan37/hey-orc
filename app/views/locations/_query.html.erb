@@ -1,0 +1,19 @@
+<h3 class="list-group-item-heading">
+  <%= title %>
+</h3>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <%= form_tag search_results_path, method: :get, class: "form-signin" do %>
+        <div class="input-group">
+          <span class="input-group-addon form-control">
+            <%= search_field_tag :query_str, nil, size: 40, placeholder: "Type here..." %>
+          </span>
+          <span class="input-group-addon form-control">
+            <%= button_tag "Click to search", name: 'search_result', url: '/search_results', class: "btn btn-default" %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </li>
+</ul>
