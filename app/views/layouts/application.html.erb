@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HeyOrc</title>
+  <title>HeyApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="/" class="navbar-brand">HeyApp</a></li>
+        </ul>
+        <%= render partial: 'locations/query' %>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+

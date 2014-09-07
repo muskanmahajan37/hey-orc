@@ -1,13 +1,4 @@
-<ul class="locations list-group">
-  <li class="list-group-item">
-    <% title = "Locations" %>
-    <%= render partial: 'locations/location_list', locals: { title: title, locations: @locations } %>
-  </li>
-  <li class="list-group-item">
-    <%= render partial: 'locations/query', locals: { title: "Search the Locations" } %>
-  </li>
-  <li class="list-group-item">
-    <%= link_to "New Location", new_location_path %>
-  </li>
-</ul>
+<% title = "Locations" %>
+<%= render partial: 'locations/location_list', locals: { title: title, locations: @locations } %>
+
 
