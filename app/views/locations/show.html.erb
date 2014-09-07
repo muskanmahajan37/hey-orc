@@ -1,0 +1,12 @@
+<ul class="locations list-group">
+  <li class="list-group-item">
+    <h3 class="list-group-item-heading">
+      <%= @location.name %>
+    </h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <%= render partial: 'locations/location_info' %>
+      </li>
+    </ul>
+  </li>
+</ul>
