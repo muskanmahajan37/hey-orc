@@ -7,6 +7,11 @@
       <li class="list-group-item">
         <%= render partial: 'locations/location_info' %>
       </li>
+      <% if @comments and @comments.length > 0 %>
+        <li class="list-group-item">
+          <%= render partial: 'locations/comments', locals: { comments: @comments } %>
+        </li>
+      <% end %>
     </ul>
   </li>
 </ul>
