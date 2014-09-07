@@ -3,4 +3,6 @@
     <% title = "Locations" %>
     <%= render partial: 'locations/location_list', locals: { title: title, locations: @locations } %>
   </li>
+  <%= link_to "New Location", new_location_path %>
 </ul>
+
