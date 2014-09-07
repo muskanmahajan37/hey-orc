@@ -1,0 +1,31 @@
+<h3 class="list-group-item-heading">
+  <%= title %>
+</h3>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row list-group-item-heading">
+      <div class="col-md-4">
+        <%= "NAME" %>
+      </div>
+      <div class="col-md-4">
+        <%= "CITY" %>
+      </div>
+      <div class="col-md-4">
+        <%= "STATE" %>
+      </div>
+    </div>
+    <% locations.each do |location| %>
+      <div class="row">
+        <div class="col-md-4">
+          <%= link_to "#{location.name}", location_url(location.id) %>
+        </div>
+        <div class="col-md-4">
+          <%= location.city %>
+        </div>
+        <div class="col-md-4">
+          <%= location.state %>
+        </div>
+      </div>
+    <% end %>
+  </li>
+</ul>
