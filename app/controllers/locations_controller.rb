@@ -18,6 +18,12 @@ class LocationsController < ApplicationController
     redirect_to :action => 'show', :id => @location.id
   end
 
+  def search_results
+    query_str = (params[:query_str].blank?) ? '*' : params[:query_str]
+    @name = "Search results for '#{query_str}'"
+    @locations = Location.search_results(query_str)
+  end
+
   private
     def generate_primary_key
       params[:location][:name].downcase.tr(': ', '_')
